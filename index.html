@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mapa Interactivo</h1>
+    <img src="alaC.jpg" width="450px" usemap="#personMap" alt="Mapa de Oficinas">
+
+    <map name="personMap">
+        <!-- Ejemplo de áreas clicables ajustadas -->
+        <area shape="rect" coords="140,50,180,80" alt="Julio González" href="#" onclick="showInfo('Julio González', 'Responsable de Jurídico')">
+        <area shape="rect" coords="140,90,180,120" alt="Eduardo Villegas" href="#" onclick="showInfo('Eduardo Villegas', 'Coordinador de Finanzas')">
+        <area shape="rect" coords="140,130,180,160" alt="Noemí Díaz" href="#" onclick="showInfo('Noemí Díaz', 'Asistente de Recursos Humanos')">
+        <area shape="rect" coords="140,170,180,200" alt="Ulises Martínez" href="#" onclick="showInfo('Ulises Martínez', 'Encargado de Materiales')">
+        <!-- Añade más áreas según lo necesites -->
+    </map>
+
+    <!-- Modal para mostrar la información -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalText">Información aquí</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
